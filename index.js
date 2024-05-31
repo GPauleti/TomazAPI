@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
     origin: "https://postgrefront2.vercel.app"
 }));
-app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json);
 
 
 app.use("/", filmeRoutes )
