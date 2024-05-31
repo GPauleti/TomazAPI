@@ -9,7 +9,7 @@ import cors from 'cors';
 const app = express();
 
 app.use(cors({
-    origin: "https://postgrefront2.vercel.app"
+    origin: ("*")
 }));
 app.use(express.json);
 
