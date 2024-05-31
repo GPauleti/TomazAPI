@@ -32,3 +32,4 @@ db.query(sql, [req.body.emailuser, req.body.senhauser], (err,data) =>{
 })
 
 app.listen(8800, () => console.log('API running on port 8880'))
+app.get('/', (req, res) => res.json('Im working'))
