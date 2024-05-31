@@ -7,6 +7,7 @@ import { db } from './db.js'
 import cors from 'cors';
 
 const app = express();
+const port = 8800;
 
 app.use(cors({
     origin: ("*")
@@ -31,4 +32,6 @@ db.query(sql, [req.body.emailuser, req.body.senhauser], (err,data) =>{
    
 })
 
-app.listen(8800);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server running at http://0.0.0.0:${port}/`);
+});
